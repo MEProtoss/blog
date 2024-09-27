@@ -1,11 +1,13 @@
 ---
-title: 计算机基础——Linux
+title: 八股文骚套路之Linux
 abbrlink: f7999b22
 date: 2024-09-20 15:33:09
 tags:
 ---
 
-## inode
+## inode（索引节点）
+
+unix系统中用于存储文件元数据的数据结构
 
 index + node
 
@@ -28,9 +30,37 @@ inode就是用来维护某个文件被分成几块、每一块在的地址、文
 ```bash
 # 实时刷新
 tail -f logfile.log
-# 每5分钟执行一次查询
+# 每5分钟执行一次查询(watch -n 300 表示每300s执行一次后面的命令)
 watch -n 300 'tail logfile.log'
 
 journalctl -f
 ```
 
+## 进程相关
+
+```bash
+# 查看进程
+ps -ef | grep xxx
+
+# 杀死进程
+kill -9 PID
+
+# 查看端口号
+lsof -i:PORT
+
+# 查看系统进程
+top
+ps
+
+# 查看文件a的第7到9行 (head表示展示前几行，tail表示展示后几行)
+cat a.txt | tail -n +7 | head -n 9
+
+# 查看a.txt的第5行
+head a.txt -n 5 | tail -n 1
+```
+
+## 给文件夹或者文件增加权限
+
+```bash
+chmod +777
+```

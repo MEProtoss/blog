@@ -3,6 +3,7 @@ title: Docker笔记
 abbrlink: 5c266b64
 date: 2024-05-10 11:33:55
 tags:
+  - 计算机基础
 ---
 
 ## docker 是什么？
@@ -16,8 +17,6 @@ tags:
 ```shell
 docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 ```
-
-
 
 ![image-20240702142158297](/home/time/文档/Notes/后端开发求职笔记/Docker笔记.assets/image-20240702142158297.png)
 
@@ -190,6 +189,3 @@ PING mysql (172.18.0.2) 56(84) bytes of data.
 64 bytes from mysql.hmall (172.18.0.2): icmp_seq=1 ttl=64 time=0.044 ms
 64 bytes from mysql.hmall (172.18.0.2): icmp_seq=2 ttl=64 time=0.054 ms
 ```
-
-
-
