@@ -114,11 +114,13 @@ hashCode是用来获取散列码，用来确定对象在hash表中的索引位�
 
 ## String、StringBuffer 和 StringBuilder 的区别。 ⭐⭐⭐⭐
 
-从可变性上来说，String是不可变的。而StringBuffer和StringBuilder是继承于AbstractStringBuilder类，虽然三者都是用字符数组保存字符串,但AbstractStringBuilder 中没有使用final 和private关键字修饰，而且还提供了许多修改字符串的方法(比如append等等)
+从可变性上来说，String是不可变的。而StringBuffer和StringBuilder是可变的
 
 从线程安全性上来说，String中的对象是不变的，所以线程安全（可理解为常量
-而StringBuffer虽然可变，但是对AbstractStringBuilder中的方法添加了同步锁，所以线程安全
+而StringBuffer添加了同步锁，线程安全
 而StringBuilder没有加锁，所以线程不安全
+
+从性能上讲：
 
 ## Java异常⭐️⭐️⭐️
 
@@ -167,7 +169,7 @@ try{
 
 优点：
 
-- 反射可以让代码更加灵活、为各种框架开发提供了遍历
+- 反射可以让代码更加灵活、为各种框架开发提供了便利
 
 缺点：
 
@@ -271,3 +273,12 @@ Hashtable(同一把锁) :使用 synchronized 来保证线程安全，效率非�
 主要目的是解决哈希冲突
 当哈希冲突发生时，通常会使用链表将具有相同哈希值的键值对存储在同一个桶中。
 然而，当链表中的元素达到一定的阈值的时候，Java1.8会将链表转化为红黑树，红黑树是一种平衡二叉搜索树，具有更快的查找效率，可以解决链表过长的时候查找效率低下的问题
+
+## static 和 final 一起使用的效果
+
+需要看修饰的是变量还使类
+
+- static final 变量:static代表变量属于类，final代表不可变，因此加在一起的话这个变量就是常量
+- static final 方法:static代表该方法属于当前类，不属于实例，不能被重写
+- final 类：不能被继承。
+- static 类：只能用于内部类，表示该类可以独立于外部类的实例存在。
