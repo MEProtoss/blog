@@ -46,3 +46,20 @@ yay -S watt-toolkit-bin
 
 ```
 
+## nvim中的可视化数据库插件
+
+```
+url:mysql://root:123456@127.0.0.1:3306/name
+
+
+```
+
+## linux命令行下spring的使用
+
+```shell
+# 刷新pom文件
+mvn clean install
+
+# 启动springboot项目
+mvn spring-boot:run
+```
