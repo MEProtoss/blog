@@ -64,3 +64,10 @@ head a.txt -n 5 | tail -n 1
 ```bash
 chmod +777
 ```
+
+## 一次性关闭所有和qq相关的进程
+
+```shell
+sudo killall qq
+
+```

@@ -63,3 +63,17 @@ mvn clean install
 # 启动springboot项目
 mvn spring-boot:run
 ```
+
+## 字体问题
+
+```shell
+
+# 安装win11系统中提取的简体中文的镜像
+yay -S ttf-ms-win11-fod-auto-hans
+
+# 刷新缓存
+
+fc-cache
+
+
+```
