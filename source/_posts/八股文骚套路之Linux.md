@@ -68,6 +68,6 @@ chmod +777
 ## 一次性关闭所有和qq相关的进程
 
 ```shell
-sudo killall qq
+killall qq
 
 ```
